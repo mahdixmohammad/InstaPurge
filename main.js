@@ -21,7 +21,7 @@ function delay(ms) {
 async function loadChat() {
 	// getting the div of the conversation
 	let conversationWindow = document.getElementsByClassName(
-		"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1rife3k x1n2onr6 xh8yej3 x16o0dkt"
+		"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
 	)[1]; // returns 2 elements, [0] is the div of all conversations, [1] is the div of current conversation
 	let lastScrollTop = conversationWindow.scrollTop;
 	let samePositionTime = 0; // To track how long the scrollTop hasn't changed
@@ -61,7 +61,7 @@ async function deleteMessages(conversation, messages) {
 		}
 
 		let conversationWindow = document.getElementsByClassName(
-			"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1rife3k x1n2onr6 xh8yej3 x16o0dkt"
+			"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
 		)[1];
 
 		if (lastMessage.classList.length === 1) {
@@ -99,7 +99,7 @@ async function deleteMessages(conversation, messages) {
 		}
 
 		let option = options[options.length - 1];
-		if (option.querySelector("title").textContent != "More") {
+		if (!option.querySelector("title").textContent.toLowerCase().includes("more")) {
 			conversation.click();
 			await deleteReaction(lastMessage);
 			continue;
@@ -112,10 +112,9 @@ async function deleteMessages(conversation, messages) {
 		// the following selector returns a list of HTML Elements
 		// namely the span elements "Time"[0], "Forward"[1], "Copy"[2], and "Unsend"[3]
 		let moreUI = document.getElementsByClassName(
-			"x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1uhb9sk x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1 xwib8y2 x1sxyh0 xurb0ha x1y1aw1k"
+			"html-div xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x9f619 xjbqb8w x78zum5 x15mokao x1ga7v0g x16uus16 xbiv7yw x1uhb9sk x1plvlek xryxfnj x1iyjqo2 x2lwn1j xeuugli xdt5ytf xqjyukv x1cy8zhl x1oa3qoh x1nhvcw1"
 		);
 		let button = moreUI[moreUI.length - 1];
-		await delay(25);
 		let unsendOrReport = button.querySelector("span").getElementsByClassName("x1lliihq x193iq5w x6ikm8r x10wlt62 xlyipyv xuxw1ft");
 
 		if (unsendOrReport[0].innerText === "Unsend") {
@@ -124,7 +123,7 @@ async function deleteMessages(conversation, messages) {
 			await delay(75);
 			document
 				.getElementsByClassName(
-					"xjbqb8w x1qhh985 xcfux6l xm0m39n x1yvgwvq x13fuv20 x178xt8z x1ypdohk xvs91rp x1evy7pa xdj266r x11i5rnm xat24cr x1mh8g0r x1wxaq2x x1iorvi4 x1sxyh0 xjkvuk6 xurb0ha x2b8uid x87ps6o xxymvpz xh8yej3 x52vrxo x4gyw5p xkmlbd1 x1xlr1w8"
+					"xjbqb8w x1qhh985 x10w94by x14e42zd x1yvgwvq x13fuv20 x178xt8z x1ypdohk xvs91rp x1evy7pa xdj266r x14z9mp xat24cr x1lziwak x1wxaq2x x1iorvi4 xf159sx xjkvuk6 xmzvs34 x2b8uid x87ps6o xxymvpz xh8yej3 x52vrxo x4gyw5p xkmlbd1 x1xlr1w8"
 				)[0]
 				.click();
 		} else {
@@ -143,7 +142,7 @@ async function deleteReaction(lastMessage) {
 		if (delReact) {
 			// we check if message has a reaction on it
 			let checkReaction = lastMessage.getElementsByClassName(
-				"x1i10hfl x1qjc9v5 xjbqb8w xjqpnuy xa49m3k xqeqjp1 x2hbi6w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz"
+				"x1i10hfl x1qjc9v5 xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk xdl72j9 x2lah0s x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j xeuugli xexx8yu xyri2b x18d9i69 x1c1uobl x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1fmog5m xu25z0z x140muxe xo1y3bh x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz"
 			);
 			if (checkReaction.length > 0) {
 				reaction = checkReaction[0];
@@ -155,7 +154,7 @@ async function deleteReaction(lastMessage) {
 				);
 				popupConfirmation = popupConfirmation[popupConfirmation.length - 1];
 				let spans = popupConfirmation.getElementsByClassName(
-					"x1lliihq x1plvlek xryxfnj x1n2onr6 x1ji0vk5 x18bv5gf x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp xo1l8bm x1roi4f4 x1tu3fi x3x7a5m x10wh9bi x1wdrske x8viiok x18hxmgj"
+					"x1lliihq x1plvlek xryxfnj x1n2onr6 xyejjpt x15dsfln x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp xo1l8bm x1roi4f4 x1tu3fi x3x7a5m x10wh9bi xpm28yp x8viiok x1o7cslx"
 				);
 				// spans could be empty in the case that other people liked a message, but not the current user
 				if (spans.length > 0) {
@@ -177,13 +176,13 @@ async function deleteChat() {
 	try {
 		while (del) {
 			let conversation = document.getElementsByClassName(
-				"x1uipg7g xu3j5b3 xol2nv xlauuyb x26u7qi x19p7ews x78zum5 xdt5ytf x1iyjqo2 x6ikm8r x10wlt62"
-			)[0];
+				"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
+			)[1];
 			let messages = conversation.querySelectorAll('[data-release-focus-from="CLICK"]');
 			await deleteMessages(conversation, messages); // wait for each message to be deleted before continuing
 
 			let conversationWindow = document.getElementsByClassName(
-				"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1rife3k x1n2onr6 xh8yej3 x16o0dkt"
+				"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
 			)[1];
 			// Check if we are at the top of the conversation
 			if (conversationWindow.scrollTop <= 1) {
