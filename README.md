@@ -2,7 +2,7 @@
 
 ## About
 
-**InstaPurge** is an extremely fast script designed to delete all Instagram messages in a conversation, directly from your browser's Developer Tools console. It ensures that both messages and reactions are wiped, leaving no trace of your existence in the conversation. It is highly recommended to load the entire chat before running the deletion process.
+**InstaPurge** is an extremely fast script designed to delete all Instagram messages in a conversation, directly from your browser's Developer Tools console. It ensures that both messages and reactions are wiped, leaving no trace of your existence in the conversation. It is highly recommended to load the entire chat before running the deletion process. This is the best way to delete your Instagram messages as all other methods are outdated and no longer work, and Instagram itself does not expose an API to automatically delete messages on the server side. Hence, we must use this script on the client side console to accomplish this.
 
 ## Features
 
@@ -70,9 +70,10 @@ By default, the script loads the entire conversation first and then begins to de
 
 -   Blocked by the Other User: If you have been blocked by the other user, you may not be able to delete reactions. Set `delReact = false` in this case to skip reaction deletion.
 -   The tab and script may start lagging if a huge chunk of the conversation has been loaded. This is normal, the script will work thoroughly and delete everything. In the case that it glitches out and pauses for longer than 30 seconds, simply run `deleteChat()` again.
+-   You need to make sure that the tab is actively running for this script to continue working. If the process for the tab sleeps or gets terminated, the script will stop executing.
 
 ## Disclaimer
 
 This script is provided for educational purposes. Please use it responsibly. The authors are not responsible for any actions taken using this script.
 
-#### InstaPurge - The fastest Instagram DM cleaning tool, working as of 2024.
+#### InstaPurge - The fastest Instagram DM cleaning tool, working as of 2025.
